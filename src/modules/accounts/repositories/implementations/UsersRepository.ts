@@ -26,7 +26,7 @@ class UsersRepository implements IUsersRepository {
             driver_license
         })
 
-        await this.repository.save
+        await this.repository.save(user)
     }
 
 }
