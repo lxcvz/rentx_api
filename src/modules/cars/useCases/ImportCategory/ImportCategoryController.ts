@@ -5,10 +5,10 @@ import { container } from "tsyringe";
 class ImportCategoryController {
     async handle(request: Request, response: Response): Promise<Response> {
         const { file } = request;
-        const importCategoryUseCase = container.resolve(ImportCategoryUseCase)
-        await importCategoryUseCase.execute(file)
+        const importCategoryUseCase = container.resolve(ImportCategoryUseCase);
+        await importCategoryUseCase.execute(file);
 
-        return response.send()
+        return response.status(201).send();
     }
 }
 
